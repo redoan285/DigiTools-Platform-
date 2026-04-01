@@ -1,54 +1,143 @@
-# DigiTools - Premium AI Tools Shop
+# 🚀 DigiTools - Premium AI Tools Shop
 
-A modern, fully responsive e-commerce website built with React where users can browse premium AI tools, add them to cart, and manage their selections.
+---
 
+## 🌐 Live Demo
 
+🔗 https://digitools-platform-by-redoan.netlify.app/
+
+---
+
+## 📸 Project Overview
+
+A modern, fully responsive **React e-commerce web app** where users can browse premium AI tools, add them to cart, and manage purchases smoothly.
+
+---
 
 ## ✨ Features
 
-- **Modern Landing Page** with beautiful Hero Banner, Stats, and CTA sections
-- **Product Catalog** with 6+ premium AI tools
-- **Add to Cart** functionality with smooth user experience
-- **Cart Management** - View, Remove items, and see total price
-- **Toggle between Products & Cart** with clean UI
-- **Real-time Cart Count** in Navbar
-- **Toast Notifications** for better UX (Add, Remove, Checkout)
-- **Fully Responsive** design for mobile, tablet & desktop
-- **Pricing Plans** section with Starter, Pro & Enterprise tiers
-- **3-Step Getting Started** guide
+* 🧭 Sticky Navbar with real-time cart count
+* 🛍️ Dynamic product listing (JSON based)
+* 🛒 Add to cart & remove functionality
+* 💰 Total price calculation
+* 🔁 Toggle between Products & Cart
+* 🔔 Toast notifications (Add, Remove, Checkout)
+* 📦 Clean UI sections (Banner, Pricing, CTA, Footer)
+* 📱 Fully responsive (Mobile, Tablet, Desktop)
+* 💎 Modern UI (Figma-inspired design)
 
-## 🚀 Live Demo
-![DigiTools Live link](https://digitools-platform-by-redoan.netlify.app/)
+---
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-- **React.js** (Vite)
-- **Tailwind CSS**
-- **DaisyUI**
-- **React Toastify**
-- **JSON** for product data
+| Technology        | Use                |
+| ----------------- | ------------------ |
+| ⚛️ React          | Frontend Framework |
+| ⚡ Vite            | Fast Build Tool    |
+| 🎨 Tailwind CSS   | Styling            |
+| 🌼 DaisyUI        | UI Components      |
+| 🔔 React Toastify | Notifications      |
+| 📦 JSON           | Fake Backend       |
+| 🔁 Hooks          | State Management   |
 
+---
 
+## 📁 Project Structure
 
-## 🎯 Key Features
+```bash
+digitools-shop/
+├── public/
+│   └── products.json
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── ProductCard.jsx
+│   │   ├── CartItem.jsx
+│   │   ├── Banner.jsx
+│   │   ├── States.jsx
+│   │   ├── GetStarted.jsx
+│   │   ├── PricingCards.jsx
+│   │   ├── CTASection.jsx
+│   │   └── Footer.jsx
+│   ├── sections/
+│   │   ├── Products.jsx
+│   │   └── Cart.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+├── tailwind.config.js
+└── package.json
+```
 
-- ✅ Add products to cart
-- ✅ Remove products from cart
-- ✅ View total amount
-- ✅ Responsive product grid (1-3 columns)
-- ✅ Beautiful pricing cards
-- ✅ Toast notifications for all actions
-- ✅ Clean and modern UI following Figma-like design
+---
 
-## 🛠️ How to Run Locally
+## ⚙️ Core Functionalities
 
-### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
+✅ Load products from `/public/products.json`
+✅ Add products to cart
+✅ Prevent duplicate items
+✅ Remove items from cart
+✅ Checkout system (reset cart)
+✅ Dynamic cart count update
+✅ Responsive product grid
+✅ Clean and user-friendly UI
 
-### Installation
+---
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/digitools-shop.git
-   cd digitools-shop
+## 📊 Data Source
+
+```bash
+/public/products.json
+```
+
+```js
+fetch("/products.json")
+```
+
+---
+
+## ⚡ Installation & Setup
+
+### 🔧 Prerequisites
+
+* Node.js (v18+)
+* npm or yarn
+
+### 🚀 Steps (ধাপসমূহ)
+
+```bash
+git clone https://github.com/redoan285/DigiTools-Platform-.git
+cd digitools-shop
+npm install
+npm run dev
+```
+
+---
+
+## 🧠 Future Improvements
+
+* 🔐 Authentication (Firebase)
+* 💳 Payment Integration (Stripe)
+* 🌍 Backend API (Node.js / Express)
+* 📱 Advanced Mobile Optimization
+* ⭐ Product Reviews & Ratings
+* 📊 Admin Dashboard
+
+---
+
+## 👨‍💻 Author
+
+**MD Redoan Mollik**
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub and share it!
+
+---
+
+## 📄 License
+
+MIT License © 2026 DigiTools
+
+---
