@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "icon": "📱",
+    "name": "Premium Smartphone",
+    "description": "Latest flagship with 120Hz display and pro camera",
+    "price": 899,
+    "period": "one time",
+    "tagType": "Best Seller",
+    "features": ["128GB Storage", "50MP Camera", "All Day Battery", "5G Ready"]
+  },
+  {
+    "id": 2,
+    "icon": "💻",
+    "name": "Ultra Laptop",
+    "description": "Powerful performance for professionals and gamers",
+    "price": 1299,
+    "period": "one time",
+    "tagType": "New",
+    "features": ["16GB RAM", "512GB SSD", "RTX Graphics", "15.6\" 144Hz"]
+  },
+  {
+    "id": 3,
+    "icon": "🎧",
+    "name": "Noise Cancelling Headphones",
+    "description": "Studio quality sound with active noise cancellation",
+    "price": 249,
+    "period": "one time",
+    "tagType": "Trending",
+    "features": ["30H Battery", "Hi-Res Audio", "Bluetooth 5.2", "Foldable"]
+  },
+  {
+    "id": 4,
+    "icon": "⌚",
+    "name": "Smart Watch Pro",
+    "description": "Track health, fitness and notifications",
+    "price": 189,
+    "period": "one time",
+    "tagType": "Featured",
+    "features": ["Heart Rate Monitor", "GPS", "Waterproof", "7 Days Battery"]
+  },
+  {
+    "id": 5,
+    "icon": "📷",
+    "name": "4K Action Camera",
+    "description": "Capture every moment in stunning 4K",
+    "price": 299,
+    "period": "one time",
+    "tagType": "Hot",
+    "features": ["4K60FPS", "Waterproof 10m", "WiFi + App", "Long Battery"]
+  },
+  {
+    "id": 6,
+    "icon": "🎮",
+    "name": "Wireless Gaming Controller",
+    "description": "Lag-free gaming experience",
+    "price": 79,
+    "period": "one time",
+    "tagType": "",
+    "features": ["Dual Vibration", "Long Range", "PC + Mobile", "Ergonomic"]
+  }
+]
