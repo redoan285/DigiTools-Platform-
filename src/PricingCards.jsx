@@ -167,7 +167,7 @@ const PricingCards = () => {
           ))}
         </div>
 
-        {/* Trust Badge */}
+        
        
       </div>
     </div>
