@@ -1,150 +1,174 @@
 import React from 'react';
 
 const PricingCards = () => {
+  const pricingPlans = [
+    {
+      id: 1,
+      name: "Starter",
+      description: "Perfect for getting started",
+      price: 0,
+      period: "month",
+      tag: null,
+      tagType: null,
+      features: [
+        "Access to 10 free tools",
+        "Basic templates",
+        "Community support",
+        "1 project per month"
+      ],
+      buttonText: "Get Started Free",
+      buttonVariant: "outline"
+    },
+    {
+      id: 2,
+      name: "Pro",
+      description: "Best for professionals",
+      price: 29,
+      period: "month",
+      tag: "Most Popular",
+      tagType: "popular",
+      features: [
+        "Access to all premium tools",
+        "Unlimited templates",
+        "Priority support",
+        "Unlimited projects",
+        "Cloud sync",
+        "Advanced analytics"
+      ],
+      buttonText: "Start Pro Trial",
+      buttonVariant: "solid"
+    },
+    {
+      id: 3,
+      name: "Enterprise",
+      description: "For teams and businesses",
+      price: 99,
+      period: "month",
+      tag: null,
+      tagType: null,
+      features: [
+        "Everything in Pro",
+        "Team collaboration",
+        "Custom integrations",
+        "Dedicated support",
+        "SLA guarantee",
+        "Custom branding"
+      ],
+      buttonText: "Contact Sales",
+      buttonVariant: "outline"
+    }
+  ];
+
   return (
-    <div className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
+    <div className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-neutral-900 mb-3">
+          <span className="text-purple-600 font-semibold text-sm uppercase tracking-wider">
+            Pricing
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">
             Simple, Transparent Pricing
           </h2>
-          <p className="text-neutral-600 text-lg">
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Choose the plan that fits your needs. Upgrade or downgrade anytime.
           </p>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          
-          {/* Starter Plan */}
-          <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
-            <div>
-              <h3 className="text-2xl font-semibold mb-1">Starter</h3>
-              <p className="text-neutral-500 text-sm">Perfect for getting started</p>
+        {/* Pricing Cards Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {pricingPlans.map((plan) => (
+            <div
+              key={plan.id}
+              className={`
+                relative rounded-2xl transition-all duration-300 hover:-translate-y-2
+                ${plan.tag === "Most Popular" 
+                  ? "bg-gradient-to-br from-purple-600 to-purple-700 shadow-2xl" 
+                  : "bg-white border border-gray-200 hover:shadow-xl"
+                }
+              `}
+            >
+              {/* Popular Tag */}
+              {plan.tag && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-amber-400 to-orange-500 text-orange-900 text-xs font-bold px-6 py-1.5 rounded-full shadow-lg">
+                    🔥 {plan.tag}
+                  </span>
+                </div>
+              )}
+
+              {/* Card Content */}
+              <div className="p-8">
+                {/* Plan Name & Description */}
+                <div className="text-center">
+                  <h3 className={`text-2xl font-bold ${plan.tag === "Most Popular" ? "text-white" : "text-gray-900"}`}>
+                    {plan.name}
+                  </h3>
+                  <p className={`text-sm mt-1 ${plan.tag === "Most Popular" ? "text-purple-200" : "text-gray-500"}`}>
+                    {plan.description}
+                  </p>
+                </div>
+
+                {/* Price */}
+                <div className="text-center mt-8 mb-8">
+                  <span className={`text-5xl font-bold ${plan.tag === "Most Popular" ? "text-white" : "text-gray-900"}`}>
+                    ${plan.price}
+                  </span>
+                  <span className={`text-base ${plan.tag === "Most Popular" ? "text-purple-200" : "text-gray-500"}`}>
+                    /{plan.period}
+                  </span>
+                  {plan.price === 0 && (
+                    <p className="text-xs text-green-500 mt-1 font-medium">Free forever</p>
+                  )}
+                </div>
+
+                {/* Features List */}
+                <div className="space-y-3 mb-10">
+                  {plan.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <svg 
+                        className={`w-5 h-5 flex-shrink-0 ${plan.tag === "Most Popular" ? "text-purple-200" : "text-purple-600"}`}
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className={`text-sm ${plan.tag === "Most Popular" ? "text-purple-100" : "text-gray-600"}`}>
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Button */}
+                <button
+                  className={`
+                    w-full py-3.5 rounded-xl font-semibold transition-all duration-200
+                    ${plan.buttonVariant === "solid" 
+                      ? "bg-white text-purple-700 hover:bg-gray-100 shadow-lg hover:shadow-xl" 
+                      : plan.tag === "Most Popular"
+                        ? "bg-white text-purple-700 hover:bg-gray-100"
+                        : "bg-purple-600 text-white hover:bg-purple-700 border-2 border-purple-600 hover:border-purple-700"
+                    }
+                  `}
+                >
+                  {plan.buttonText}
+                </button>
+
+                {/* Extra Note for Free Plan */}
+                {plan.price === 0 && (
+                  <p className="text-center text-xs text-gray-400 mt-4">
+                    No credit card required
+                  </p>
+                )}
+              </div>
             </div>
-
-            <div className="mt-8 mb-10">
-              <span className="text-5xl font-bold">$0</span>
-              <span className="text-neutral-500">/Month</span>
-            </div>
-
-            <ul className="space-y-4 mb-12">
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-green-500 text-xl">✓</span>
-                Access to 10 free tools
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-green-500 text-xl">✓</span>
-                Basic templates
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-green-500 text-xl">✓</span>
-                Community support
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-green-500 text-xl">✓</span>
-                1 project per month
-              </li>
-            </ul>
-
-            <button className="w-full py-4 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-2xl transition-all">
-              Get Started Free
-            </button>
-          </div>
-
-          {/* Pro Plan - Most Popular */}
-          <div className="relative bg-gradient-to-b from-purple-600 to-purple-700 text-white rounded-3xl p-8 shadow-2xl scale-105">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 text-xs font-bold px-6 py-1 rounded-full">
-              Most Popular
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-semibold mb-1">Pro</h3>
-              <p className="text-purple-200 text-sm">Best for professionals</p>
-            </div>
-
-            <div className="mt-8 mb-10">
-              <span className="text-5xl font-bold">$29</span>
-              <span className="text-purple-200">/Month</span>
-            </div>
-
-            <ul className="space-y-4 mb-12">
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-white text-xl">✓</span>
-                Access to all premium tools
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-white text-xl">✓</span>
-                Unlimited templates
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-white text-xl">✓</span>
-                Priority support
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-white text-xl">✓</span>
-                Unlimited projects
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-white text-xl">✓</span>
-                Cloud sync
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-white text-xl">✓</span>
-                Advanced analytics
-              </li>
-            </ul>
-
-            <button className="w-full py-4 bg-white text-purple-700 font-semibold rounded-2xl hover:bg-gray-100 transition-all">
-              Start Pro Trial
-            </button>
-          </div>
-
-          {/* Enterprise Plan */}
-          <div className="bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
-            <div>
-              <h3 className="text-2xl font-semibold mb-1">Enterprise</h3>
-              <p className="text-neutral-500 text-sm">For teams and businesses</p>
-            </div>
-
-            <div className="mt-8 mb-10">
-              <span className="text-5xl font-bold">$99</span>
-              <span className="text-neutral-500">/Month</span>
-            </div>
-
-            <ul className="space-y-4 mb-12">
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-green-500 text-xl">✓</span>
-                Everything in Pro
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-green-500 text-xl">✓</span>
-                Team collaboration
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-green-500 text-xl">✓</span>
-                Custom integrations
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-green-500 text-xl">✓</span>
-                Dedicated support
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-green-500 text-xl">✓</span>
-                SLA guarantee
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <span className="text-green-500 text-xl">✓</span>
-                Custom branding
-              </li>
-            </ul>
-
-            <button className="w-full py-4 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-2xl transition-all">
-              Contact Sales
-            </button>
-          </div>
+          ))}
         </div>
+
+        {/* Trust Badge */}
+       
       </div>
     </div>
   );
