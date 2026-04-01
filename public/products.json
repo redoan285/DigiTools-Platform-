@@ -1,92 +1,101 @@
 [
   {
+    "id": 1,
+    "icon": "📱",
+    "name": "Premium Smartphone",
+    "description": "Latest flagship with 120Hz display and pro camera system",
+    "price": 899,
+    "period": "one time",
+    "tag": "popular",
+    "tagType": "Best Seller",
+    "features": ["128GB Storage", "50MP Triple Camera", "All Day Battery", "5G Ready"]
+  },
+  {
+    "id": 2,
+    "icon": "💻",
+    "name": "Ultra Gaming Laptop",
+    "description": "Powerful performance for professionals and hardcore gamers",
+    "price": 1299,
+    "period": "one time",
+    "tag": "new",
+    "tagType": "New Arrival",
+    "features": ["16GB RAM", "512GB SSD", "RTX 4060 Graphics", "15.6\" 144Hz Display"]
+  },
+  {
+    "id": 3,
+    "icon": "🎧",
+    "name": "Noise Cancelling Headphones",
+    "description": "Studio quality sound with active noise cancellation",
+    "price": 249,
+    "period": "one time",
+    "tag": "trending",
+    "tagType": "Trending",
+    "features": ["30H Playtime", "Hi-Res Audio", "Bluetooth 5.2", "Foldable Design"]
+  },
+  {
+    "id": 4,
+    "icon": "⌚",
+    "name": "Smart Watch Pro",
+    "description": "Advanced health tracking and smart notifications",
+    "price": 189,
+    "period": "one time",
+    "tag": "featured",
+    "tagType": "Featured",
+    "features": ["Heart Rate & SpO2", "GPS Tracking", "Waterproof 5ATM", "7 Days Battery"]
+  },
+  {
+    "id": 5,
+    "icon": "📷",
+    "name": "4K Action Camera",
+    "description": "Capture every adventure in stunning 4K resolution",
+    "price": 299,
+    "period": "one time",
+    "tag": "hot",
+    "tagType": "Hot Deal",
+    "features": ["4K60FPS Video", "Waterproof 10m", "WiFi + App Control", "Long Battery Life"]
+  },
+  {
+    "id": 6,
+    "icon": "🎮",
+    "name": "Wireless Gaming Controller",
+    "description": "Lag-free gaming experience for PC and Mobile",
+    "price": 79,
+    "period": "one time",
+    "tag": "popular",
+    "tagType": "Best Choice",
+    "features": ["Dual Vibration", "Long Wireless Range", "PC & Mobile Support", "Ergonomic Grip"]
+  },
+  {
     "id": 7,
     "icon": "🖥️",
-    "name": "4K Curved Monitor",
-    "description": "Immersive 32-inch display for work and gaming",
-    "price": 399,
+    "name": "Curved Gaming Monitor",
+    "description": "Immersive 144Hz curved display for ultimate gaming",
+    "price": 449,
     "period": "one time",
-    "tagType": "Best Seller",
-    "features": ["32\" UHD Panel", "144Hz Refresh Rate", "HDR10 Support", "Dual HDMI"]
+    "tag": "new",
+    "tagType": "New",
+    "features": ["27 Inch Curved", "144Hz Refresh Rate", "1ms Response Time", "HDR Support"]
   },
   {
     "id": 8,
-    "icon": "⌨️",
-    "name": "Mechanical Keyboard",
-    "description": "Tactile RGB keyboard for ultimate typing feel",
-    "price": 129,
+    "icon": "🔋",
+    "name": "Fast Charging Power Bank",
+    "description": "20000mAh high-speed charging for all devices",
+    "price": 59,
     "period": "one time",
+    "tag": "trending",
     "tagType": "Trending",
-    "features": ["Blue Switches", "RGB Backlit", "Aluminum Body", "Detachable Cable"]
+    "features": ["20000mAh Capacity", "22.5W Fast Charging", "Dual USB Output", "LED Display"]
   },
   {
     "id": 9,
-    "icon": "🖱️",
-    "name": "Wireless Pro Mouse",
-    "description": "Ultra-lightweight mouse with precision sensor",
-    "price": 89,
-    "period": "one time",
-    "tagType": "New",
-    "features": ["25K DPI Sensor", "80h Battery", "5 Programmable Buttons", "USB-C"]
-  },
-  {
-    "id": 10,
-    "icon": "🎙️",
-    "name": "Streaming Microphone",
-    "description": "Studio-quality USB mic for creators",
+    "icon": "📚",
+    "name": "E-Reader Tablet",
+    "description": "Paper-like reading experience with eye protection",
     "price": 159,
     "period": "one time",
-    "tagType": "Hot",
-    "features": ["Cardioid Pattern", "Plug & Play", "Mute Button", "Pop Filter Included"]
-  },
-  {
-    "id": 11,
-    "icon": "📶",
-    "name": "Wi-Fi 6 Router",
-    "description": "Blazing fast internet coverage for your home",
-    "price": 199,
-    "period": "one time",
-    "tagType": "Popular",
-    "features": ["6000 Mbps Speed", "Dual Band", "8 External Antennas", "App Control"]
-  },
-  {
-    "id": 12,
-    "icon": "📽️",
-    "name": "Smart Mini Projector",
-    "description": "Portable cinema with built-in streaming apps",
-    "price": 349,
-    "period": "one time",
+    "tag": "featured",
     "tagType": "Featured",
-    "features": ["1080p Native", "Android OS", "Built-in Speaker", "Bluetooth"]
-  },
-  {
-    "id": 13,
-    "icon": "💾",
-    "name": "External SSD 1TB",
-    "description": "High-speed portable storage for large files",
-    "price": 110,
-    "period": "one time",
-    "tagType": "Best Value",
-    "features": ["1050MB/s Speed", "Shock Resistant", "USB 3.2 Gen 2", "Compact Design"]
-  },
-  {
-    "id": 14,
-    "icon": "🔋",
-    "name": "MagSafe Power Bank",
-    "description": "Wireless magnetic charging on the go",
-    "price": 59,
-    "period": "one time",
-    "tagType": "New",
-    "features": ["10000mAh", "15W Wireless", "Strong Magnet", "USB-C PD"]
-  },
-  {
-    "id": 15,
-    "icon": "💡",
-    "name": "Smart RGB Desk Lamp",
-    "description": "Adjustable lighting for a perfect workspace",
-    "price": 45,
-    "period": "one time",
-    "tagType": "Trending",
-    "features": ["16M Colors", "Voice Control", "Eye Comfort Mode", "App Sync"]
+    "features": ["6.8 Inch E-Ink Display", "Adjustable Warm Light", "Weeks of Battery", "Waterproof"]
   }
 ]
