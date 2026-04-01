@@ -58,7 +58,7 @@ export default function App() {
           className={`btn btn-lg rounded-full ${!showCart ? "btn-primary" : "btn-outline"}`}
           onClick={() => setShowCart(false)}
         >
-          🛍️ Our Products
+           Products
         </button>
         <button
           className={`btn btn-lg rounded-full ${showCart ? "btn-primary" : "btn-outline"}`}
