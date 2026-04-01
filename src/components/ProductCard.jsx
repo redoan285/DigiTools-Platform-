@@ -2,7 +2,9 @@ export default function ProductCard({ product, handleAdd, isAdded }) {
   return (
     <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
       <div className="card-body p-6">
-        <h2 className="text-3xl mb-3">{product.icon} {product.name}</h2>
+        <h2 className="text-3xl mb-3">
+          {product.icon} {product.name}
+        </h2>
 
         <p className="text-base-content/70 mb-5">{product.description}</p>
 
@@ -12,7 +14,9 @@ export default function ProductCard({ product, handleAdd, isAdded }) {
         </div>
 
         {product.tagType && (
-          <div className="badge badge-primary badge-lg mb-5">{product.tagType}</div>
+          <div className="badge badge-primary badge-lg mb-5">
+            {product.tagType}
+          </div>
         )}
 
         <ul className="space-y-2 mb-8 text-sm">
@@ -23,8 +27,13 @@ export default function ProductCard({ product, handleAdd, isAdded }) {
           ))}
         </ul>
 
+        {/* Fixed Green Button */}
         <button
-          className={`btn w-full text-lg ${isAdded ? "btn-success" : "btn-primary"}`}
+          className={`btn w-full text-lg font-semibold py-3 transition-all duration-300 ${
+            isAdded 
+              ? "bg-green-600 hover:bg-green-700 text-white border-none"   // Custom Green
+              : "btn-primary"
+          }`}
           onClick={() => handleAdd(product)}
           disabled={isAdded}
         >
